@@ -79,12 +79,12 @@ Future <void> launchURL(String url) async{
                 
               ),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 15.0),
             Text(
               article.description ?? 'No description',
               style: GoogleFonts.montserrat(fontSize: 18.0),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 15.0),
             ElevatedButton(
               onPressed: () => launchURL(article.url),
               child: Text('Read More'),
