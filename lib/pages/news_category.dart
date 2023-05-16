@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/news_model.dart';
 import 'package:news_app/pages/articleDetailScreen.dart';
+import 'package:news_app/pages/entertainmentNews.dart';
 import 'package:news_app/pages/healthNews.dart';
 import 'package:news_app/pages/sportsNews.dart';
 import 'package:news_app/pages/techNews.dart';
@@ -47,6 +48,7 @@ class _NewsCategoryScreenState extends State<NewsCategoryScreen> {
       'Sports': SportNewsScreen(),
       'Health': HealthNewsScreen(),
       'Tech': TechNewsScreen(),
+      'Entertainment': EntertainmentNewsScreen(),
     };
 
     final screen = categoryScreens[category];
@@ -84,19 +86,72 @@ class _NewsCategoryScreenState extends State<NewsCategoryScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(width: 8.0),
-                      ElevatedButton(
-                        onPressed: () => navigateToCategoryNews('Sports'),
-                        child: Text('Sports'),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () => navigateToCategoryNews('Sports'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors
+                                .blue, // Customize the button color if needed
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          child: Text('Sports'),
+                        ),
                       ),
                       SizedBox(width: 8.0),
-                      ElevatedButton(
-                        onPressed: () => navigateToCategoryNews('Health'),
-                        child: Text('Health'),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () => navigateToCategoryNews('Health'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors
+                                .blue, // Customize the button color if needed
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          child: Text('Health'),
+                        ),
                       ),
                       SizedBox(width: 8.0),
-                      ElevatedButton(
-                        onPressed: () => navigateToCategoryNews('Tech'),
-                        child: Text('Tech'),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () => navigateToCategoryNews('Tech'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors
+                                .blue, // Customize the button color if needed
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          child: Text('Tech'),
+                        ),
+                      ),
+                      SizedBox(width: 8.0),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: ElevatedButton(
+                          onPressed: () => navigateToCategoryNews('Entertainment'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors
+                                .blue, // Customize the button color if needed
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                          child: Text('Entertainment'),
+                        ),
                       ),
                       SizedBox(width: 8.0),
                     ],
