@@ -1,5 +1,6 @@
   import 'package:flutter/material.dart';
 import 'package:news_app/pages/home_page.dart';
+import 'package:news_app/pages/loginPage.dart';
   import 'package:news_app/pages/newsScreen.dart';
 
   void main() {
@@ -10,7 +11,7 @@ import 'package:news_app/pages/home_page.dart';
     @override
     Widget build(BuildContext context) {
       return MaterialApp(
-        home: HomePage(),
+        home: LoginPageState(),
       );
     }
   }

@@ -72,7 +72,8 @@ class _NewsCategoryScreenState extends State<NewsCategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: widget.category == 'General' ? null :
+       AppBar(
         title: Text(widget.category + ' News'),
       ),
       body: _articles.isEmpty
