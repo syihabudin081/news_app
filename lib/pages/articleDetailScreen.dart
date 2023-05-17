@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison, file_names, constant_identifier_names, library_private_types_in_public_api, no_leading_underscores_for_local_identifiers
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -30,11 +32,11 @@ class _ArticleDetailScreenState extends State<ArticleDetailScreen> {
         break;
       case Timezone.WITA:
         formattedTime =
-            DateFormat('MMMM dd, yyyy HH:mm').format(parsedTime.add(Duration(hours: 1)));
+            DateFormat('MMMM dd, yyyy HH:mm').format(parsedTime.add(const Duration(hours: 1)));
         break;
       case Timezone.WIT:
         formattedTime =
-            DateFormat('MMMM dd, yyyy HH:mm').format(parsedTime.add(Duration(hours: 2)));
+            DateFormat('MMMM dd, yyyy HH:mm').format(parsedTime.add(const Duration(hours: 2)));
         break;
     }
 
@@ -52,10 +54,10 @@ Future <void> launchURL(String url) async{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Article Detail'),
+        title: const Text('Article Detail'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -73,7 +75,7 @@ Future <void> launchURL(String url) async{
                   alignment: Alignment.center,
                 ),
               ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Text(
               widget.article.title,
               style: GoogleFonts.montserrat(
@@ -81,7 +83,7 @@ Future <void> launchURL(String url) async{
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
             StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
               return Row(
                 children: [
@@ -101,10 +103,10 @@ Future <void> launchURL(String url) async{
                       );
                     }).toList(),
                   ),
-                  SizedBox(width: 8.0),
+                  const SizedBox(width: 8.0),
                   Text(
                     formatPublishedTime(widget.article.publishedAt!, selectedTimezone),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16.0,
                       color: Colors.grey,
                     ),
@@ -112,7 +114,7 @@ Future <void> launchURL(String url) async{
                 ],
               );
             }),
-            SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
             Text(
               widget.article.author!,
               style: GoogleFonts.montserrat(
@@ -120,15 +122,15 @@ Future <void> launchURL(String url) async{
                 color: Colors.blueGrey,
               ),
             ),
-            SizedBox(height: 15.0),
+            const SizedBox(height: 15.0),
             Text(
               widget.article.description ?? 'No description',
               style: GoogleFonts.montserrat(fontSize: 18.0),
             ),
-            SizedBox(height: 15.0),
+            const SizedBox(height: 15.0),
             ElevatedButton(
               onPressed: () => launchURL(widget.article.url!),
-              child: Text('Read More'),
+              child: const Text('Read More'),
             ),
           ],
         ),

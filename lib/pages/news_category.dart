@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, avoid_print, prefer_interpolation_to_compose_strings, prefer_const_constructors, deprecated_member_use
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/news_model.dart';
@@ -14,7 +16,7 @@ import 'package:google_fonts/google_fonts.dart';
 class NewsCategoryScreen extends StatefulWidget {
   final String category;
 
-  NewsCategoryScreen({required this.category});
+  const NewsCategoryScreen({super.key, required this.category});
 
   @override
   _NewsCategoryScreenState createState() => _NewsCategoryScreenState();
