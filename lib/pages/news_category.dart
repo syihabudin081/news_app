@@ -32,6 +32,7 @@ class _NewsCategoryScreenState extends State<NewsCategoryScreen> {
 
   Future<void> fetchNewsData() async {
     try {
+      print('fetching news...');
       final articles = await _apiService.fetchArticles(widget.category);
       print('Fetched ${articles.length} articles');
       setState(() {
@@ -142,7 +143,8 @@ class _NewsCategoryScreenState extends State<NewsCategoryScreen> {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: ElevatedButton(
-                          onPressed: () => navigateToCategoryNews('Entertainment'),
+                          onPressed: () =>
+                              navigateToCategoryNews('Entertainment'),
                           style: ElevatedButton.styleFrom(
                             primary: Colors
                                 .blue, // Customize the button color if needed

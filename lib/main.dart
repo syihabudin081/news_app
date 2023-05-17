@@ -1,4 +1,5 @@
   import 'package:flutter/material.dart';
+import 'package:news_app/pages/home_page.dart';
   import 'package:news_app/pages/newsScreen.dart';
 
   void main() {
@@ -9,7 +10,7 @@
     @override
     Widget build(BuildContext context) {
       return MaterialApp(
-        home: NewsScreen(),
+        home: HomePage(),
       );
     }
   }

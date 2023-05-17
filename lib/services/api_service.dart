@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
 import 'package:news_app/models/news_model.dart';
 
 class NewsApiService {
@@ -11,7 +10,7 @@ class NewsApiService {
   Future<List<Article>> fetchArticles(String category) async {
     final response =
         await http.get(Uri.parse(apiUrl + "&category=" + category));
-
+    print('fetching articles for $category' + '......');
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
       final articlesData = jsonData['articles'] as List<dynamic>;
